@@ -1,0 +1,234 @@
+.header {
+  color: $color-grey-dark;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("../img/header-bg.png") no-repeat fixed center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    height: 14rem;
+    width: 100%;
+    background-image: url("../img/path.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    opacity: 0.5;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    height: 14rem;
+    width: 100%;
+    background: url("../img/Path.png");
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 1;
+  }
+  &__top {
+    width: 100%;
+    height: 5.8rem;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    animation: moveDown 2s 2s backwards;
+  }
+
+  &__logobox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 10%;
+    margin-right: 5rem;
+  }
+  &__logo {
+    height: 5rem;
+    animation: logomotion 2s 2s backwards;
+    &--text {
+      color: $color-primary;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+  }
+}
+
+.navbar {
+  font-size: 1.5rem;
+  display: flex;
+  // flex: 2 0 70%;
+
+  &__list {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 100%;
+  }
+  &__item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-left: 3rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s;
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 20%;
+  &--text {
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  &--icon {
+    height: 2.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+// HEADER BOTTOM
+.header {
+  &__bottom {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    animation: fadeIn 2s 3s backwards;
+  }
+
+  &__services {
+    display: flex;
+    justify-content: center;
+    height: 70rem;
+    align-items: center;
+  }
+
+  &__service {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    background-color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px dashed $color-primary;
+    outline-offset: 5px;
+    align-self: flex-end;
+    position: fixed;
+    z-index: 20;
+    animation: fadeIn 2s 3s backwards;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-2rem);
+    }
+    &-1 {
+      left: 6.5rem;
+      top: 50%;
+    }
+    &-2 {
+      right: 6.5rem;
+      top: 50%;
+      & > :last-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__service-photo {
+    display: inline-block;
+  }
+
+  &__service-text {
+    display: inline-block;
+    font-weight: 700;
+  }
+}
+
+.insurance-table {
+  height: 40rem;
+  flex-basis: 50%;
+  border-radius: 1rem;
+  margin-top: -23rem;
+  overflow: hidden;
+
+  &__header {
+    background-color: $color-primary;
+    height: 12%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+    border: 3px solid $color-primary;
+    border-bottom: none;
+    border-left: none;
+    height: 17rem;
+    background-color: rgba($color-grey-light, 0.83);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:nth-child(5) {
+      border-radius: 0 0 1rem 0;
+      border-right: none;
+    }
+    &:first-child {
+      border-right: none;
+    }
+    &:last-child {
+      border-radius: 0 0 0 1rem;
+    }
+    &:nth-child(4),
+    &:nth-child(8) {
+      border-left: none;
+      border-bottom: none;
+    }
+    &-text {
+      font-size: 1.4rem;
+      transition: all 0.4s;
+    }
+    &-photo {
+      transition: all 0.4s;
+    }
+
+    &:hover &-photo {
+      transform: scale(1.2);
+    }
+    &:hover &-text {
+      transform: translateY(-1rem);
+    }
+  }
+  &__item:hover {
+    background-color: $color-white;
+  }
+}

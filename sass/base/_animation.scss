@@ -1,0 +1,40 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes logomotion {
+  from {
+    // opacity: 0;
+    transform: translate(-65rem, 30rem) scale(5);
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+    // opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUp {
+  from {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

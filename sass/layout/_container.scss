@@ -1,0 +1,229 @@
+.container {
+  width: 60%;
+  height: 100%;
+  background-color: $color-white;
+  position: absolute;
+  top: -16rem;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  color: $color-grey-dark;
+  animation: moveUp 2s 2s backwards;
+
+  &__header {
+    color: $color-primary;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__featuers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    &-item {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__reminder {
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1rem rgba($color-grey, 0.5);
+    padding: 4rem;
+    border-radius: 2rem;
+
+    &-items {
+      margin-top: 7rem;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 4rem;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        background: url("../img/circles.png");
+        background-size: cover;
+      }
+    }
+
+    &-item {
+      flex: 1 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5rem;
+    }
+    &-item--name {
+      color: $color-primary;
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    &-item--select {
+      width: 90%;
+      border: 0.2rem solid $color-primary;
+      padding: 1.5rem 3.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0.5rem 1.4rem rgba(0, 0, 0, 0.25);
+      font-size: 1.5rem;
+      cursor: pointer;
+      input[type="text"],
+      input[type="date"] {
+        border: none;
+        width: 100%;
+        text-align: center;
+        color: inherit;
+        font-size: 1.5rem;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__collegues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    &-box {
+      padding: 2rem 3rem;
+      background: $color-grey-light;
+      text-align: center;
+      border-radius: 5rem;
+    }
+    &-text {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__circle {
+    // border: 2px solid $color-primary;
+    // width: 70rem;
+    // height: 70rem;
+    // border-radius: 50%;
+    // margin : 5rem 0;
+    // position: relative;
+    // z-index: 1;
+
+    height: 35rem;
+    width: 60rem;
+    background-image: url("../img/Ellipse.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 8rem 0;
+    z-index: 12;
+    position: relative;
+    background-position: center;
+
+    &-logo {
+      height: 7rem;
+      width: 7rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .item-1 {
+      transform: translate(-4rem, -12rem);
+    }
+    .item-2 {
+      transform: translate(26rem, -4rem);
+    }
+    .item-3 {
+      transform: translate(-4rem, 5rem);
+      &:before {
+        content: "\003c";
+        position: absolute;
+        left: -7rem;
+        top: 1rem;
+        z-index: 22222;
+        font-size: 4rem;
+        color: #000;
+        background: $color-grey;
+        height: 4rem;
+        width: 4rem;
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &:after {
+        content: "\003e";
+        position: absolute;
+        right: -7rem;
+        top: 1rem;
+        z-index: 22222;
+        font-size: 4rem;
+        color: #000;
+        background: $color-grey;
+        height: 4rem;
+        width: 4rem;
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .item-4 {
+      transform: translate(-32rem, -5rem);
+      position: relative;
+      z-index: 11;
+    }
+
+    &-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $color-grey-light;
+      border-radius: 50%;
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // animation: rotateCircle 2s infinite;
+    }
+    &-photo {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+  &__logo-box {
+    position: absolute;
+    bottom: 1rem;
+  }
+  &__logo {
+    &-photo {
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+}
